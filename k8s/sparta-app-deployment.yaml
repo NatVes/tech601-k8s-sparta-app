@@ -17,6 +17,9 @@ spec:
           image: nataliaveselova/sparta-app-k8s-gh
           ports:
             - containerPort: 3000
+          env:
+            - name: DB_HOST
+              value: mongodb://sparta-db-service:27017/posts
           resources:
             requests:
               cpu: "100m"
